@@ -5,27 +5,19 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-3xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white shadow-sm sm:rounded-lg p-6">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <div class="container py-5">
+        <div class="card shadow-sm">
+            <div class="card-body">
                 <form action="{{ route('mahasiswa.store') }}" method="POST">
                     @csrf
-
                     @include('mahasiswa._form')
-
-                    <div class="flex gap-2 mt-4">
-                        <button type="submit"
-                                class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
-                            Simpan
-                        </button>
-                        <a href="{{ route('mahasiswa.index') }}"
-                           class="px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-500">
-                            Batal
-                        </a>
+                    <div class="mt-4">
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                        <a href="{{ route('mahasiswa.index') }}" class="btn btn-secondary">Batal</a>
                     </div>
                 </form>
-
             </div>
         </div>
     </div>
